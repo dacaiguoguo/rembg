@@ -11,6 +11,7 @@ from .sessions.u2net import U2netSession
 def new_session(
     model_name: str = "u2net", providers=None, *args, **kwargs
 ) -> BaseSession:
+    print(f'dacaiguoguo new session 111 {model_name}')
     """
     Create a new session object based on the specified model name.
 
@@ -36,7 +37,7 @@ def new_session(
             break
 
     sess_opts = ort.SessionOptions()
-
+    print(f'dacaiguoguo new session 111aa {session_class}')
     if "OMP_NUM_THREADS" in os.environ:
         sess_opts.inter_op_num_threads = int(os.environ["OMP_NUM_THREADS"])
         sess_opts.intra_op_num_threads = int(os.environ["OMP_NUM_THREADS"])

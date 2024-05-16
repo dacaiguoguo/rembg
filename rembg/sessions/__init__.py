@@ -51,3 +51,9 @@ from .u2netp import U2netpSession
 
 sessions_class.append(U2netpSession)
 sessions_names.append(U2netpSession.name())
+
+from .rmbg14 import RMBG14Session
+
+sessions_class.append(RMBG14Session)
+sessions_names.append(RMBG14Session.name())
+
